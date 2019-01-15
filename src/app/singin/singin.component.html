@@ -1,0 +1,14 @@
+
+<div class="mat-container">
+    <form novalidate [formGroup]="signinForm" (ngSubmit)="onSubmit()" >
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+    
+      <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+      <button type="submit"mat-raised-button color="primary">Iniciar sesión</button>
+    </form>
+  </div>

@@ -4,3 +4,22 @@ body{
     margin:0;
     font-family: 'roboto';
 }
+form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 40px auto;
+}
+.c-blue{
+    color:#953DAC;
+}
+.card-header-image {
+   font-size:50px; 
+}
+.full-width{
+    width: 100%;
+    display: block;
+}
+.align-center{
+    text-align: center;
+}

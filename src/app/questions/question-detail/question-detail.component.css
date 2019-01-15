@@ -1,0 +1,24 @@
+.answer{
+    padding: 3px 12px ;
+}
+ul.answer-list{
+    padding: 0;
+}
+ul.answer-list li {
+    list-style: none;
+    margin-top:15px;
+}
+ul.answer-list li h5 {
+    margin: 0;
+}
+ul.answer-list li h5 small{
+    color: #7d7d7d;
+}
+ul.answer-list li .description{
+    margin: 0;
+    margin-left: 2px;
+    padding-top: 6px;
+    padding-left: 8px;
+    border-left: solid 3px #d6c8c8;
+    font-size: 14px;
+}
