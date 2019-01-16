@@ -12,13 +12,15 @@ import { QuestionDetailComponent } from './questions/question-detail/question-de
 import { AnswerComponent } from './answer/answer.component';
 import { SinginComponent } from './singin/singin.component';
 import { RegisterComponent } from './register/register.component';
+import { QuestionsListComponent } from './questions/questions-list/questions-list.component';
 @NgModule({
   declarations: [
     AppComponent,
     QuestionDetailComponent,
     AnswerComponent,
     SinginComponent,
-    RegisterComponent
+    RegisterComponent,
+    QuestionsListComponent
   ],
   imports: [
     BrowserModule,
