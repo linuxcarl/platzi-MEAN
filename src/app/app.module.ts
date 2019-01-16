@@ -11,12 +11,14 @@ import 'moment/locale/es';
 import { QuestionDetailComponent } from './questions/question-detail/question-detail.component';
 import { AnswerComponent } from './answer/answer.component';
 import { SinginComponent } from './singin/singin.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     QuestionDetailComponent,
     AnswerComponent,
-    SinginComponent
+    SinginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

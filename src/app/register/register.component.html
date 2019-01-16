@@ -1,0 +1,23 @@
+<div class="mat-container">
+    <form novalidate [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Varify Password" formControlName="verifyPassword" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary"><i class="material-icons">save</i> Registrar</button>
+      <button type="button" mat-raised-button color="accent"><i class="material-icons">arrow_back</i> Regresar</button>
+    </form>
+  </div>
