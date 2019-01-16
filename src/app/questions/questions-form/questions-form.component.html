@@ -1,0 +1,16 @@
+<div class="mat-container">
+  <form #f="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Title" [(ngModel)]="question.title" name="title">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Description" [(ngModel)]="question.description" name="description">
+    </mat-form-field>
+    <mat-grid-list cols="4" rowHeight="100px">
+      <mat-grid-tile *ngFor="let icon of icons">
+        <i mat-list-icon class="devicon-{{icon.name}}-{{getIconVersion(icon)}}"></i>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <button type="submit"mat-raised-button color="primary" (click)="onSubmit()">Guardar pregunta</button>
+  </form>
+</div>
