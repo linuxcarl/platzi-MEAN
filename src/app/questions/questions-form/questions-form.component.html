@@ -1,16 +1,28 @@
 <div class="mat-container">
-  <form #f="ngForm">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <mat-form-field>
-      <input matInput placeholder="Title" [(ngModel)]="question.title" name="title">
+      <input matInput placeholder="Title" ngModel name="title">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Description" [(ngModel)]="question.description" name="description">
+      <input matInput placeholder="Description" ngModel name="description">
     </mat-form-field>
     <mat-grid-list cols="4" rowHeight="100px">
+      <mat-grid-tile>
+        <mat-radio-group [ngModel] name="icon">
+          <mat-radio-button value="none">
+            <i mat-list-icon class="material-icons">help</i>
+            <small>sin icon</small>
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-grid-tile>
       <mat-grid-tile *ngFor="let icon of icons">
-        <i mat-list-icon class="devicon-{{icon.name}}-{{getIconVersion(icon)}}"></i>
+        <mat-radio-group [ngModel] name="icon">
+          <mat-radio-button value="devicon-{{icon.name}}-{{getIconVersion(icon)}}">
+            <i mat-list-icon class="devicon-{{icon.name}}-{{getIconVersion(icon)}}"></i>
+          </mat-radio-button>
+        </mat-radio-group>
       </mat-grid-tile>
     </mat-grid-list>
-    <button type="submit"mat-raised-button color="primary" (click)="onSubmit()">Guardar pregunta</button>
+    <button type="submit"mat-raised-button color="primary">Guardar pregunta</button>
   </form>
 </div>

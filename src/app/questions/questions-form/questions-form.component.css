@@ -1,4 +1,7 @@
 i{
-    font-size: 60px;
+    font-size: 45px;
     color: #8979ff;
+}
+small{
+    display: block;
 }

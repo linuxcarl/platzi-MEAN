@@ -8,7 +8,7 @@ import icons from '../icons';
   styleUrls: ['./questions-form.component.css']
 })
 export class QuestionsFormComponent implements OnInit {
-  question: any =  {title:'',description:''}
+  //question: any =  {title:'',description:'', icon:''}
   icons: object[] = icons;
   getIconVersion(icon: any){
     let version;
@@ -22,17 +22,29 @@ export class QuestionsFormComponent implements OnInit {
     }
     return version;
   }
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
-
+  onSubmit(form: NgForm) {
+    console.log(form.value);
+    const q = new Questions(
+      form.value.title,
+      form.value.description,
+      new Date(),
+      form.value.icon
+    );
+    console.log(q);
+  }
+  /*
   onSubmit(){
     const q = new Questions(
       this.question.title,
       this.question.description,
-      new Date()
+      new Date(),
+      this.question.icon
     );
     console.log(q);
-  }
+  }*/
 }

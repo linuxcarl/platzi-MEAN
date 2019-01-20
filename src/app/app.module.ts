@@ -14,6 +14,7 @@ import { SinginComponent } from './singin/singin.component';
 import { RegisterComponent } from './register/register.component';
 import { QuestionsListComponent } from './questions/questions-list/questions-list.component';
 import { QuestionsFormComponent } from './questions/questions-form/questions-form.component';
+import { Routing } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { QuestionsFormComponent } from './questions/questions-form/questions-for
     MaterialModule,
     MomentModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Routing
   ],
   providers: [],
   bootstrap: [AppComponent]
