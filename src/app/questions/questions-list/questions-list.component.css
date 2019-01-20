@@ -1,3 +1,9 @@
 i{
     font-size: 32px;
 }
+.add-questins{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 28px;
+}

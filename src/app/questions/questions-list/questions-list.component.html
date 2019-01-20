@@ -6,3 +6,4 @@
     <small mat-line class="italic"> {{question.answer.length}} respuestas - {{question.createdAt | amLocale:'es'  | amTimeAgo}} </small>
   </mat-list-item>
 </mat-list>
+<button mat-fab color="primary" class="add-questins" [routerLink]="['questions','new']">+</button>
