@@ -17,7 +17,7 @@
         <input matInput placeholder="Varify Password" formControlName="verifyPassword" [type]="hide ? 'password' : 'text'">
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
       </mat-form-field>
-      <button type="submit" mat-raised-button color="primary"><i class="material-icons">save</i> Registrar</button>
-      <button type="button" mat-raised-button color="accent"><i class="material-icons">arrow_back</i> Regresar</button>
+      <button type="submit" mat-raised-button color="primary"><i class="material-icons">save</i> Guardar</button>
+      <button type="button"  mat-button color="primary" [routerLink]="[ '/']"><i class="material-icons">arrow_back</i> Regresar a inicio de sesion</button>
     </form>
   </div>
