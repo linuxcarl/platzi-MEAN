@@ -1,21 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { Questions } from '../question.model';
+import { QuestionsService } from '../questions.service';
 
-const q = new Questions(
-  '¿Comó levantar un server apache?',
-  'Facil y sencillo como...',
-  new Date(),
-  'devicon-apache-plain'
-)
 @Component({
   selector: 'app-questions-list',
   templateUrl: './questions-list.component.html',
-  styleUrls: ['./questions-list.component.css']
+  styleUrls: ['./questions-list.component.css'],
+  providers: [QuestionsService]
 })
 export class QuestionsListComponent implements OnInit {
-  questions: Questions[] = new Array(5).fill(q);
+  questions: Questions[] ;
+  loanding: boolean =  true;
+  constructor(private questionService: QuestionsService){
+
+  }
 
   ngOnInit() {
+    this.questionService
+        .getQuestions()
+        .subscribe((res:Questions[]) => {
+          this.questions = res;
+          this.loanding =  false;
+        }, e => console.log(e));
   }
 
 }

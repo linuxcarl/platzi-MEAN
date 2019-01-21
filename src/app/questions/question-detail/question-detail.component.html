@@ -1,4 +1,8 @@
-<mat-card>
+<div *ngIf="loanding" class="spinner">
+    <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="question">
+  <mat-card>
     <mat-card-header>
       <div mat-card-avatar class="card-header-image"><i class="{{question.icon}} c-blue"></i></div>
       <mat-card-title>{{question.title}}</mat-card-title>
@@ -27,3 +31,4 @@
       </p>
       <app-answer [question]="question"></app-answer>
   </div>
+</div>

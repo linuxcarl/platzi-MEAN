@@ -5,6 +5,6 @@ import { QuestionsFormComponent } from "./questions-form/questions-form.componen
 //exportamos rutas locales solo para path de questions
 export const QUESTION_ROUTES = [
     {path:'',component: QuestionsListComponent},
-    {path:'new',component:QuestionsFormComponent}
+    {path:'new',component:QuestionsFormComponent},
     {path:':id',component: QuestionDetailComponent}
 ];

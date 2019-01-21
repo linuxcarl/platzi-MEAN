@@ -1,3 +1,6 @@
+<div *ngIf="loanding" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
 <mat-list>
   <mat-list-item [routerLink]="['/questions', question.id]" *ngFor="let question of questions">
     <mat-icon *ngIf="question.icon==''" mat-list-icon>live_help</mat-icon>

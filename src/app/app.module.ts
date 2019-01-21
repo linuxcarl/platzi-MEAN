@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { QuestionsListComponent } from './questions/questions-list/questions-list.component';
 import { QuestionsFormComponent } from './questions/questions-form/questions-form.component';
 import { Routing } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { Routing } from './app.routing';
     MomentModule,
     FormsModule,
     ReactiveFormsModule,
-    Routing
+    Routing,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

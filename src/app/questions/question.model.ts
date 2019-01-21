@@ -1,6 +1,6 @@
 import { Answer } from "../answer/answer.model";
 
-export class Questions{,
+export class Questions{
     id?: string;
     title: string;
     description:string;
@@ -14,7 +14,7 @@ export class Questions{,
         createdAt: Date,
         icon?:string
     ){
-        this.id = '1',
+        this.id = '1', 
         this.title = title;
         this.description = description;
         this.createdAt = createdAt;

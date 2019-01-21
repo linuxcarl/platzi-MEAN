@@ -7,3 +7,7 @@ i{
     right: 30px;
     font-size: 28px;
 }
+.spinner .mat-spinner{
+    margin: auto; 
+    margin-top: 50px;
+}
