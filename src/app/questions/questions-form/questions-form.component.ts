@@ -2,10 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Questions } from '../question.model';
 import icons from '../icons';
+import { QuestionsService } from '../questions.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-questions-form',
   templateUrl: './questions-form.component.html',
-  styleUrls: ['./questions-form.component.css']
+  styleUrls: ['./questions-form.component.css'],
+  providers: [QuestionsService]
 })
 export class QuestionsFormComponent implements OnInit {
   //question: any =  {title:'',description:'', icon:''}
@@ -22,20 +26,25 @@ export class QuestionsFormComponent implements OnInit {
     }
     return version;
   }
-  constructor() { 
+  constructor(private questionService: QuestionsService,
+              private router:Router) { 
   }
 
   ngOnInit() {
   }
   onSubmit(form: NgForm) {
-    console.log(form.value);
     const q = new Questions(
       form.value.title,
       form.value.description,
       new Date(),
       form.value.icon
     );
-    console.log(q);
+    this.questionService.addQuestion(q)
+        .subscribe( 
+          ({id}) => this.router.navigate(['/questions', id])
+          ,error => console.log(error))
+
+    form.resetForm();
   }
   /*
   onSubmit(){

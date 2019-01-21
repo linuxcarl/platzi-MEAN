@@ -5,6 +5,5 @@ export class Answer{
     constructor( public description:string,
         public question: Questions,
         public createdAt?: Date,
-        public user? : User,
-        public answer?:[]){}
+        public user? : User){}
 }
